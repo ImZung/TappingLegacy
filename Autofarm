@@ -1,0 +1,51 @@
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local autofarm = Instance.new("TextButton")
+local deactivate = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.Position = UDim2.new(0.192785829, 0, 0.314814806, 0)
+main.Size = UDim2.new(0, 542, 0, 67)
+main.Active = true
+main.Draggable = true 
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(62, 65, 255)
+TextLabel.Size = UDim2.new(0, 339, 0, 67)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Tapping Legends X Autofarm ︱By Silence#0001"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 20.000
+
+autofarm.Name = "autofarm"
+autofarm.Parent = main
+autofarm.BackgroundColor3 = Color3.fromRGB(147, 143, 30)
+autofarm.Position = UDim2.new(0.625461102, 0, 0, 0)
+autofarm.Size = UDim2.new(0, 100, 0, 67)
+autofarm.Font = Enum.Font.SourceSans
+autofarm.Text = "Activate"
+autofarm.TextColor3 = Color3.fromRGB(0, 0, 0)
+autofarm.TextSize = 14.000
+autofarm.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/ImZung/tlx/main/AutoFarm'))()
+end)
+
+deactivate.Name = "deactivate"
+deactivate.Parent = main
+deactivate.BackgroundColor3 = Color3.fromRGB(147, 143, 30)
+deactivate.Position = UDim2.new(0.809962928, 0, 0, 0)
+deactivate.Size = UDim2.new(0, 103, 0, 67)
+deactivate.Font = Enum.Font.SourceSans
+deactivate.Text = "Deactivate"
+deactivate.TextColor3 = Color3.fromRGB(0, 0, 0)
+deactivate.TextSize = 14.000
+deactivate.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/ImZung/Zoak/main/Deactivate'))()
+end)
